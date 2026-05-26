@@ -1,0 +1,47 @@
+{% extends 'userbase.html'%}
+{%block contents%}
+
+<section id="intro">
+
+  <div class="intro-text">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p><h2>Data View</h2></p>
+    <table class="table table-bordered footer_title bg-light text-dark">
+<thead>
+  <tr>
+      <th>S.No</th>
+      <th>email</th>
+      <th>Age</th>
+      <th>SystolicBP</th>
+      <th>DiastolicBP</th>
+      <th>Blood Sugar</th>
+      <th>Body temperature</th>
+      <th>heartrate</th>
+      <th>Risk range</th>
+  </tr>
+</thead>
+<tbody>
+  {% for i in idata %}
+    <tr>
+      <td>{{i.id}}</td>
+                                              <td>{{i.email}}</td>
+                                              <td>{{i.data1}}</td>
+                                              <td>{{i.data2}}</td>
+                                              <td>{{i.data3}}</td>
+                                              <td>{{i.data4}}</td>
+                                              <td>{{i.data5}}</td>
+                                              <td>{{i.data6}}</td>
+                                                <td>{{i.pred}}</td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>
+
+
+</p>
+
+
+</center>
+  </div>
+</section>
+{%endblock%}

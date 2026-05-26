@@ -1,0 +1,53 @@
+{% extends 'base.html'%}
+{%block contents%}
+
+ <section id="intro">
+
+    <div class="intro-text">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+      <p><h2>Predictions</h2></p>
+       <form method="POST" action="{%url 'predictionss'%}" >
+        {% csrf_token %}
+          <!-- <label for="email">email:</label>
+          <input type="text" id="email" name="email">
+            <br> -->
+            <label for="field1">Age(in years):</label>
+            <input type="text" id="field1" name="field1">
+            <br>
+            <label for="field2">SystolicBP (mmHg):</label>
+            <input type="text" id="field2" name="field2">
+            <br>
+            <label for="field3">DiastolicBP (mmHg):</label>
+            <input type="text" id="field3" name="field3">
+            <br>
+            <label for="field4">Blood Sugar(in mmol/L):</label>
+            <input type="text" id="field4" name="field4">
+            <br>
+            <label for="field5">Body temperature(in fahrenheit):</label>
+            <input type="text" id="field5" name="field5">
+            <br>
+            <label for="field6">heartrate:</label>
+            <input type="text" id="field6" name="field6">
+            <br>
+            <input type="submit" value="Submit">
+
+
+
+
+
+                        {% if messages %}
+                               {% for message in messages %}
+
+                                  <font color='GREEN'> {{ message }}</font>
+                               {% endfor %}
+                           {% endif %}
+
+                </table>
+
+            </form>  </p><a class="nav-link" href=""></a>
+            <a href="{%url 'after' %}" class="btn-get-started scrollto">Precautions</a>
+
+
+    </div>
+  </section>
+{%endblock%}
